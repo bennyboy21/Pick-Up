@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Open+Sans:wght@500&display=swap');
+
+@media (max-width:599px) {
+    body {
+        background:rgb(235, 235, 235);
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #map {
+        width:0px;
+        height:0px;
+    }
+
+    @keyframes showNotification {
+        0% {
+            top:-100px;
+        }
+
+        7% {
+            top:1.5vw;
+        }
+
+        93% {
+            top:1.5vw;
+        }
+
+        100% {
+            top:-100px;
+        }
+    }
+
+    #success-Notification {
+        width:97vw;
+        height:75px;
+        position:absolute;
+        top:-100px;
+        left:1.5vw;
+        background:rgb(200, 200, 200);
+        border-radius: 15px;
+    }
+
+    #Request-Sent {
+        color: #008137;
+        width:125px;
+        font-family: 'Open Sans', sans-serif;
+        position:absolute;
+        top:10px;
+        left:75px;
+        font-weight: 600;
+        font-size: 19px;
+    }
+
+    #check-Mark-Icon {
+        width:60px;
+        position:absolute;
+        top:10px;
+        left:5px;
+    }
+
+    #error-Notification {
+        width:97vw;
+        height:75px;
+        position:absolute;
+        top:-100px;
+        left:1.5vw;
+        background:rgb(200, 200, 200);
+        border-radius: 15px;
+    }
+
+    #ex-Mark-Icon {
+        width:60px;
+        position:absolute;
+        top:6px;
+        left:5px;
+    }
+
+    #Request-Previously-Sent {
+        color: #ff0000;
+        width:125px;
+        font-family: 'Open Sans', sans-serif;
+        position:absolute;
+        top:10px;
+        left:70px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    #check-Mark-Icon {
+        width:60px;
+        position:absolute;
+        top:10px;
+        left:5px;
+    }
+
+    #no-Location {
+        width: 100vw;
+        height:100vh;
+        position:absolute;
+        opacity: 0;
+        top:0px;
+        left:0px;
+        background:rgba(0, 0, 0, 0.3);
+    }
+
+    #no-Location-Container {
+        background:#008137;
+        width:100vw;
+        height:95vh;
+        display: flex;
+        justify-content: center;
+        position:fixed;
+        top:5vh;
+        border-radius: 15px;
+    }
+
+    #no-Location-Icon {
+        width:100px;
+        position:absolute;
+        top:15px;
+        transform: rotate(-10deg)
+    }
+
+    #red-Ex {
+        width:5px;
+        border-radius: 1000px;
+        transform: rotate(35deg) translate(calc(-50% + 7px), 0px);
+        position:absolute;
+        top:10px;
+        left:50%;
+        height:110px;
+        background: rgb(0, 0, 0);
+    }
+
+    #error-Text {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        width:275px;
+        height:50px;
+        position:absolute;
+        top:250px;
+        text-align: center;
+        animation: forwards;
+    }
+
+    @keyframes showError {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes showErrorCard {
+        0% {
+            top:200%;
+        }
+    
+        100% {
+            top:5vh;
+        }
+    }
+
+    #hole-Background {
+        width:100vw;
+        height:100vh;
+        background:rgb(235, 235, 235);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    #logo-Holder {
+        width:300px;
+        height:50px;
+        position:fixed;
+        top:75px;
+        left:50%;
+        transform: translate(-50%);
+    }
+
+    #logo {
+        width:125px;
+        position:fixed;
+        top:-37px;
+        left:calc(50% - 45px);
+    }
+
+    #logo-Garbage-Can {
+        width:50px;
+        position:fixed;
+        top:-10px;
+        left:calc(50% - 83px);
+    }
+
+    #info-Container {
+        width:85vw;
+        position: fixed;
+        color: #008137;
+        font-family: 'Bakbak One', cursive;
+        border: 2px solid #008d3d;
+        font-size: 20px;
+        top:140px;
+        max-width: 500px;
+    }
+
+    #users-Address {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        color: #008137;
+        display: flex;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    #address {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        font-weight: 100;
+        color: #008137;
+    }
+
+    #users-Postal-Code {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        color: #008137;
+        display: flex;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    #postal-Code {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        font-weight: 100;
+        color: #008137;
+    }
+
+    #users-Date {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        color: #008137;
+        display: flex;
+        font-weight: 600;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    #date {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        font-weight: 100;
+        color: #008137;
+    }
+
+    #submit-Request {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 15px;
+        width:150px;
+        height:50px;
+        position:fixed;
+        bottom: 75px;
+        border-radius: 15px;
+        border: none;
+        border: 2px solid #008137;
+        background:#008137;
+    }
+
+    #help-Container {
+        width:300px;
+        position: absolute;
+        color: #008137;
+        font-family: 'Bakbak One', cursive;
+        border: 2px solid #008d3d;
+        font-size:35px;
+        top:325px;
+        left:calc(50% + -279px);
+        display: none;
+    }
+
+    #help-Info {
+        display: none;
+    }
+
+    #no-Location {
+        display: none;
+    }
+}
+
+
+
+
+
+@media (min-width:600px) {
+    body {
+        background:rgb(235, 235, 235);
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    #map {
+        width:0px;
+        height:0px;
+    }
+
+    #hole-Background {
+        width:100vw;
+        height:100vh;
+        background:rgb(235, 235, 235);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
+    #logo-Holder {
+        width:300px;
+        height:50px;
+        position:fixed;
+        top:75px;
+        left:50%;
+        transform: translate(-50%);
+    }
+
+    #logo {
+        width:125px;
+        position:fixed;
+        top:-37px;
+        left:calc(50% - 45px);
+    }
+
+    #logo-Garbage-Can {
+        width:50px;
+        position:fixed;
+        top:-10px;
+        left:calc(50% - 83px);
+    }
+
+    #info-Container {
+        width:300px;
+        position: absolute;
+        color: #008137;
+        font-family: 'Bakbak One', cursive;
+        border: 2px solid #008d3d;
+        font-size:35px;
+        top:140px;
+        left:calc(50% + -279px);
+    }
+
+    #users-Address {
+        font-family: 'Open Sans', sans-serif;
+        color: #008137;
+        display: flex;
+        font-weight: 600;
+        font-size:20px;
+        margin-bottom: 5px;
+    }
+
+    #address {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        font-weight: 100;
+        color: #008137;
+    }
+
+    #users-Postal-Code {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        color: #008137;
+        font-weight: 600;
+        font-size:20px;
+        margin-bottom: 5px;
+    }
+
+    #postal-Code {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        font-weight: 100;
+        color: #008137;
+    }
+
+    #users-Date {
+        font-family: 'Open Sans', sans-serif;
+        color: #008137;
+        display: flex;
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    #date {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        font-weight: 100;
+        color: #008137;
+    }
+
+    #submit-Request {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        width:200px;
+        height:50px;
+        position:absolute;
+        top:164px;
+        left:calc(50% + 79px);
+        border: none;
+        border: 2px solid #008137;
+        background:#008137;
+    }
+
+    #help-Container {
+        width:300px;
+        position: absolute;
+        color: #008137;
+        font-family: 'Bakbak One', cursive;
+        border: 2px solid #008d3d;
+        font-size:35px;
+        top:325px;
+        left:calc(50% + -279px);
+    }
+
+    #phone-Number {
+        font-family: 'Open Sans', sans-serif;
+        color: #008137;
+        display: flex;
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    #number {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        font-weight: 100;
+        color: #008137;
+    }
+
+    #help-Email {
+        font-family: 'Open Sans', sans-serif;
+        color: #008137;
+        display: flex;
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    #email {
+        font-family: 'Open Sans', sans-serif;
+        display: flex;
+        font-weight: 100;
+        color: #008137;
+    }
+
+    #help-Info {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        width:200px;
+        height:50px;
+        position:absolute;
+        top:349px;
+        left:calc(50% + 79px);
+        border: none;
+        border: 2px solid #008137;
+        background:#008137;
+    }
+
+    #no-Location-Container {
+        background:#008137;
+        width:350px;
+        height:450px;
+        display: flex;
+        justify-content: center;
+        position:fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+    }
+
+    #no-Location {
+        width: 100vw;
+        height:100vh;
+        position:absolute;
+        opacity: 0;
+        top:0px;
+        left:0px;
+        background:rgba(0, 0, 0, 0.3);
+    }
+
+    #no-Location-Icon {
+        width:100px;
+        position:fixed;
+        top:15px;
+        transform: rotate(-10deg)
+    }
+
+    #red-Ex {
+        width:5px;
+        border-radius: 1000px;
+        transform: rotate(35deg) translate(calc(-50% + 7px), 0px);
+        position:absolute;
+        top:10px;
+        left:50%;
+        height:110px;
+        background: rgb(0, 0, 0);
+    }
+
+    #error-Text {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        font-size: 25px;
+        width:275px;
+        height:50px;
+        position:absolute;
+        top:250px;
+        text-align: center;
+        animation: forwards;
+    }
+
+    @keyframes showError {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes showErrorCard {
+        0% {
+            top:200%;
+        }
+    
+        100% {
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    #success-Notification {
+        width:200px;
+        height:75px;
+        position:absolute;
+        top:100%;
+        /* top:calc(100% - 100px); */
+        left:calc(100% - 225px);
+        background:rgb(200, 200, 200);
+        border-radius: 15px;
+    }
+
+    @keyframes showNotification {
+        0% {
+            top:100%;
+        }
+
+        7% {
+            top:calc(100% - 100px);
+        }
+
+        93% {
+            top:calc(100% - 100px);
+        }
+
+        100% {
+            top:100%;
+        }
+    }
+
+    #Request-Sent {
+        color: #008137;
+        width:125px;
+        font-family: 'Open Sans', sans-serif;
+        position:absolute;
+        top:10px;
+        left:75px;
+        font-weight: 600;
+        font-size: 19px;
+        /* animation: sdkjfkj 1s step-start; */
+    }
+
+    #check-Mark-Icon {
+        width:60px;
+        position:absolute;
+        top:10px;
+        left:5px;
+    }
+
+    #error-Notification {
+        width:200px;
+        height:75px;
+        position:absolute;
+        top:100%;
+        /* top:calc(100% - 100px); */
+        left:calc(100% - 225px);
+        background:rgb(200, 200, 200);
+        border-radius: 15px;
+    }
+
+    #ex-Mark-Icon {
+        width:60px;
+        position:absolute;
+        top:6px;
+        left:5px;
+    }
+
+    #Request-Previously-Sent {
+        color: #ff0000;
+        width:125px;
+        font-family: 'Open Sans', sans-serif;
+        position:absolute;
+        top:10px;
+        left:70px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+}
